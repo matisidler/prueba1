@@ -1,0 +1,26 @@
+name: prueba1
+description: prueba1 description
+events: {}
+structs: {}
+typedefs: {}
+state:
+  owner: AgentID // current owner of this smart contract
+  text: String
+funcs:
+  init:
+    params:
+      owner: AgentID? // optional owner of this smart contract
+  setOwner:
+    access: owner // current owner of this smart contract
+    params:
+      owner: AgentID // new owner of this smart contract
+  setText:
+    params:
+      res: String
+views:
+  getOwner:
+    results:
+      owner: AgentID // current owner of this smart contract
+  getText:
+    results:
+      res: String
